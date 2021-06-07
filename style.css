@@ -1,0 +1,139 @@
+@keyframes pisca{
+    0% { opacity: 0.2;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.urna{
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex; /* Fica um item ao lado do outro */
+}
+.tela{
+    width: 500px;
+    height: 320px;
+    background: linear-gradient(to right, #e8e8e8, #c1c1c1);
+    border: 2px solid #555;
+    display: flex;
+    flex-direction: column;/* irá colocar um item abaixo do outro */
+}
+.teclado{
+    background-color: #403a3a;
+     margin-left: 30px;
+}
+.teclado-linha{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;/* faz com que a linha(posição) vá para baixo */
+}
+.teclado-botao{
+    width: 70px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #555;
+}
+.b-branco{
+    margin-left: 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+}
+.b-corrige{
+    background-color: #f09047;
+    color: #000;
+    font-size: 15px;
+}
+.b-confirma{
+    margin-left: 0px;
+    background-color: #48c079;
+    width: 90px;
+    height: 50px;
+    color: #000;
+    font-size: 15px;
+}
+
+
+.d-1{
+    flex: 1;/* restante da tela */
+    display: flex;
+}
+.d-1-left{
+    flex: 1;
+    display: flex; /* irá ficar um item ao lado do outro */
+    flex-direction: column;/* irá transformar esse lado a lado em um item acima do outro */
+    padding-left: 20px;
+}
+.d-1-1{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.d-1-2{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* O "text-align não funciona, pois o display é flex */
+}
+.d-1-3{
+    height: 50px;
+}
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+.pisca{
+    animation-name:  pisca;
+    animation-duration:  1s;
+    animation-iteration-count: infinite;
+}
+.d-1-4{
+    line-height: 30px ;
+    flex: 1;
+}
+
+.d-1-right{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.d-1-image{
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.d-1-image img{
+    width: 100%;
+}
+.d-1-image.small{
+    margin-top: 10px;
+    width: 80%;
+    font-size: 12px;
+}
+.d-2{
+    padding-left: 10px;
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #000;
+}
